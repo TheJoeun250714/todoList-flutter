@@ -16,7 +16,16 @@ class TodoService {
 
       final List<dynamic> data = response.data;
       return data.map((json) => TodoModel.fromJson(json)).toList();
-    } catch (e) {
+    } on DioException catch (e) {
+      if(e.type == DioExceptionType.connectionTimeout
+          || e.type == DioExceptionType.receiveTimeout) {
+        throw Exception(ErrorMessages.networkError);
+      } else if(e.response?.statusCode != null && e.response!.statusCode! >= 500) {
+        throw Exception(ErrorMessages.serverError);
+      }
+      throw Exception(ErrorMessages.loadFailed);
+
+    }catch (e) {
       throw Exception(ErrorMessages.loadFailed);
     }
   }
