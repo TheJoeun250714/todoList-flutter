@@ -1,0 +1,1126 @@
+2026-01-13 09:35:22.395  INFO 17708 --- [restartedMain] com.my.todo.TodoApplication              : Starting TodoApplication using Java 21.0.8 with PID 17708 (E:\project\todolist-workspace\todo\build\classes\java\main started by TJ in E:\project\todolist-workspace\todo)
+2026-01-13 09:35:22.396  INFO 17708 --- [restartedMain] com.my.todo.TodoApplication              : No active profile set, falling back to 1 default profile: "default"
+2026-01-13 09:35:22.542  INFO 17708 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-13 09:35:22.543  INFO 17708 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-13 09:35:24.932  INFO 17708 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-13 09:35:24.952  INFO 17708 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-13 09:35:24.952  INFO 17708 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-13 09:35:25.022  INFO 17708 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-13 09:35:25.022  INFO 17708 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2478 ms
+2026-01-13 09:35:27.069  INFO 17708 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-01-13 09:35:27.148  INFO 17708 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-01-13 09:35:27.172  INFO 17708 --- [restartedMain] com.my.todo.TodoApplication              : Started TodoApplication in 5.809 seconds (process running for 7.055)
+2026-01-13 09:36:34.406  INFO 17708 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-13 09:36:34.407  INFO 17708 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-13 09:36:34.410  INFO 17708 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-01-13 09:36:34.442 ERROR 17708 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.] with root cause
+
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:568)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:544)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2026-01-13 09:44:22.425  INFO 17708 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-13 09:44:22.429  INFO 17708 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-01-13 09:44:27.372  INFO 23476 --- [restartedMain] com.my.todo.TodoApplication              : Starting TodoApplication using Java 21.0.8 with PID 23476 (E:\project\todolist-workspace\todo\build\classes\java\main started by TJ in E:\project\todolist-workspace\todo)
+2026-01-13 09:44:27.375  INFO 23476 --- [restartedMain] com.my.todo.TodoApplication              : No active profile set, falling back to 1 default profile: "default"
+2026-01-13 09:44:27.433  INFO 23476 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-13 09:44:27.433  INFO 23476 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-13 09:44:29.622  INFO 23476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-13 09:44:29.638  INFO 23476 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-13 09:44:29.638  INFO 23476 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-13 09:44:29.689  INFO 23476 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-13 09:44:29.690  INFO 23476 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2256 ms
+2026-01-13 09:44:31.295  INFO 23476 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-01-13 09:44:31.341  INFO 23476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-01-13 09:44:31.349  INFO 23476 --- [restartedMain] com.my.todo.TodoApplication              : Started TodoApplication in 4.689 seconds (process running for 5.666)
+2026-01-13 09:44:36.456  INFO 23476 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-13 09:44:36.466  INFO 23476 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-01-13 09:44:42.581  INFO 8056 --- [restartedMain] com.my.todo.TodoApplication              : Starting TodoApplication using Java 21.0.8 with PID 8056 (E:\project\todolist-workspace\todo\build\classes\java\main started by TJ in E:\project\todolist-workspace\todo)
+2026-01-13 09:44:42.583  INFO 8056 --- [restartedMain] com.my.todo.TodoApplication              : No active profile set, falling back to 1 default profile: "default"
+2026-01-13 09:44:42.642  INFO 8056 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-13 09:44:42.642  INFO 8056 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-13 09:44:44.050  INFO 8056 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-13 09:44:44.064  INFO 8056 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-13 09:44:44.065  INFO 8056 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-13 09:44:44.131  INFO 8056 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-13 09:44:44.131  INFO 8056 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1488 ms
+2026-01-13 09:44:45.189  INFO 8056 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-01-13 09:44:45.228  INFO 8056 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-01-13 09:44:45.237  INFO 8056 --- [restartedMain] com.my.todo.TodoApplication              : Started TodoApplication in 3.29 seconds (process running for 3.976)
+2026-01-13 09:44:50.312  INFO 8056 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-13 09:44:50.312  INFO 8056 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-13 09:44:50.313  INFO 8056 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-01-13 09:44:50.347  INFO 8056 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-13 09:44:50.352  INFO 8056 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2026-01-13 09:44:50.719  INFO 8056 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@4b98e1b2
+2026-01-13 09:44:50.721  INFO 8056 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2026-01-13 09:44:50.726  INFO 8056 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 09:44:50.727  INFO 8056 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 09:44:50.786  INFO 8056 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : Running Time : 59ms
+2026-01-13 09:44:50.786  INFO 8056 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 09:44:57.531  INFO 8056 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-13 09:44:57.536  INFO 8056 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-01-13 09:44:57.542  INFO 8056 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2026-01-13 09:44:57.545  INFO 8056 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2026-01-13 09:45:03.388  INFO 17340 --- [restartedMain] com.my.todo.TodoApplication              : Starting TodoApplication using Java 21.0.8 with PID 17340 (E:\project\todolist-workspace\todo\build\classes\java\main started by TJ in E:\project\todolist-workspace\todo)
+2026-01-13 09:45:03.399  INFO 17340 --- [restartedMain] com.my.todo.TodoApplication              : No active profile set, falling back to 1 default profile: "default"
+2026-01-13 09:45:03.461  INFO 17340 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-13 09:45:03.462  INFO 17340 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-13 09:45:05.253  INFO 17340 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-13 09:45:05.270  INFO 17340 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-13 09:45:05.270  INFO 17340 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-13 09:45:05.362  INFO 17340 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-13 09:45:05.363  INFO 17340 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1901 ms
+2026-01-13 09:45:07.154  INFO 17340 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-01-13 09:45:07.236  INFO 17340 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-01-13 09:45:07.251  INFO 17340 --- [restartedMain] com.my.todo.TodoApplication              : Started TodoApplication in 4.594 seconds (process running for 5.384)
+2026-01-13 09:47:56.859  INFO 17340 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-13 09:47:56.860  INFO 17340 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-13 09:47:56.861  INFO 17340 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-01-13 09:47:56.886 ERROR 17340 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.] with root cause
+
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:568)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:544)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2026-01-13 09:54:22.874  INFO 17340 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-13 09:54:22.879  INFO 17340 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-01-13 09:54:31.257  INFO 20068 --- [restartedMain] com.my.todo.TodoApplication              : Starting TodoApplication using Java 21.0.8 with PID 20068 (E:\project\todolist-workspace\todo\build\classes\java\main started by TJ in E:\project\todolist-workspace\todo)
+2026-01-13 09:54:31.273  INFO 20068 --- [restartedMain] com.my.todo.TodoApplication              : No active profile set, falling back to 1 default profile: "default"
+2026-01-13 09:54:31.346  INFO 20068 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-13 09:54:31.347  INFO 20068 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-13 09:54:33.320  INFO 20068 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-13 09:54:33.337  INFO 20068 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-13 09:54:33.337  INFO 20068 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-13 09:54:33.393  INFO 20068 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-13 09:54:33.394  INFO 20068 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2046 ms
+2026-01-13 09:54:34.461  INFO 20068 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-01-13 09:54:34.501  INFO 20068 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-01-13 09:54:34.509  INFO 20068 --- [restartedMain] com.my.todo.TodoApplication              : Started TodoApplication in 3.987 seconds (process running for 4.711)
+2026-01-13 09:54:36.568  INFO 20068 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-13 09:54:36.568  INFO 20068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-13 09:54:36.569  INFO 20068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-01-13 09:54:36.592 ERROR 20068 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.] with root cause
+
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:568)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:544)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2026-01-13 09:54:37.248 ERROR 20068 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.] with root cause
+
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:568)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:544)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2026-01-13 09:54:38.232 ERROR 20068 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.] with root cause
+
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:568)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:544)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2026-01-13 09:54:39.281 ERROR 20068 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.] with root cause
+
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:568)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:544)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2026-01-13 09:54:46.671 ERROR 20068 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.] with root cause
+
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:568)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:544)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2026-01-13 09:54:47.159 ERROR 20068 --- [http-nio-8080-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.] with root cause
+
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:568)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:544)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2026-01-13 09:54:47.323 ERROR 20068 --- [http-nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.] with root cause
+
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:568)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:544)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2026-01-13 09:54:47.471 ERROR 20068 --- [http-nio-8080-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.] with root cause
+
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:568)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:544)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2026-01-13 09:54:47.615 ERROR 20068 --- [http-nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.] with root cause
+
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:568)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:544)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2026-01-13 09:54:47.748 ERROR 20068 --- [http-nio-8080-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.] with root cause
+
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:568)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:544)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2026-01-13 09:54:47.904 ERROR 20068 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.] with root cause
+
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:568)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:544)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2026-01-13 09:54:48.066 ERROR 20068 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.] with root cause
+
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:568)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:544)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2026-01-13 09:54:48.220 ERROR 20068 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.] with root cause
+
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:568)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:544)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2026-01-13 09:54:48.382 ERROR 20068 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.] with root cause
+
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:568)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:544)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2026-01-13 09:54:48.532 ERROR 20068 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.] with root cause
+
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:568)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:544)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2026-01-13 09:54:48.958 ERROR 20068 --- [http-nio-8080-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.] with root cause
+
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:568)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:544)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2026-01-13 09:54:49.932  INFO 20068 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-13 09:54:49.938  INFO 20068 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-01-13 09:55:30.292  INFO 6728 --- [restartedMain] com.my.todo.TodoApplication              : Starting TodoApplication using Java 21.0.8 with PID 6728 (E:\project\todolist-workspace\todo\build\classes\java\main started by TJ in E:\project\todolist-workspace\todo)
+2026-01-13 09:55:30.294  INFO 6728 --- [restartedMain] com.my.todo.TodoApplication              : No active profile set, falling back to 1 default profile: "default"
+2026-01-13 09:55:30.382  INFO 6728 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-13 09:55:30.382  INFO 6728 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-13 09:55:32.723  INFO 6728 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-13 09:55:32.739  INFO 6728 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-13 09:55:32.740  INFO 6728 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-13 09:55:32.798  INFO 6728 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-13 09:55:32.798  INFO 6728 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2415 ms
+2026-01-13 09:55:33.924  INFO 6728 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-01-13 09:55:33.966  INFO 6728 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-01-13 09:55:33.974  INFO 6728 --- [restartedMain] com.my.todo.TodoApplication              : Started TodoApplication in 4.979 seconds (process running for 6.312)
+2026-01-13 09:55:35.459  INFO 6728 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-13 09:55:35.459  INFO 6728 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-13 09:55:35.460  INFO 6728 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-01-13 09:55:35.500  INFO 6728 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-13 09:55:35.507  INFO 6728 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2026-01-13 09:55:35.733  INFO 6728 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@5feb8dd0
+2026-01-13 09:55:35.737  INFO 6728 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2026-01-13 09:55:35.744  INFO 6728 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 09:55:35.744  INFO 6728 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 09:55:35.787  INFO 6728 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : Running Time : 43ms
+2026-01-13 09:55:35.788  INFO 6728 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 09:55:52.331  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : [TodoController.createTodo()] 요청 / ip : 127.0.0.1
+2026-01-13 09:55:52.332  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.addTodo() 서비스 호출 ==========
+2026-01-13 09:55:52.332  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : Parameter : [TodoDto(id=null, content=코딩하기, isCompleted=false, createdAt=null)]
+2026-01-13 09:55:52.355  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : Running Time : 23ms
+2026-01-13 09:55:52.355  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 09:55:52.361  INFO 6728 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-13 09:55:52.363  INFO 6728 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 09:55:52.363  INFO 6728 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 09:55:52.365  INFO 6728 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : Running Time : 2ms
+2026-01-13 09:55:52.365  INFO 6728 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 09:55:58.459  INFO 6728 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : [TodoController.createTodo()] 요청 / ip : 127.0.0.1
+2026-01-13 09:55:58.460  INFO 6728 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.addTodo() 서비스 호출 ==========
+2026-01-13 09:55:58.460  INFO 6728 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : Parameter : [TodoDto(id=null, content=코딩하기.., isCompleted=false, createdAt=null)]
+2026-01-13 09:55:58.461  INFO 6728 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-13 09:55:58.461  INFO 6728 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 09:55:58.465  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-13 09:55:58.466  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 09:55:58.466  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 09:55:58.469  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : Running Time : 3ms
+2026-01-13 09:55:58.469  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 09:56:02.659  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : [TodoController.createTodo()] 요청 / ip : 127.0.0.1
+2026-01-13 09:56:02.660  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.addTodo() 서비스 호출 ==========
+2026-01-13 09:56:02.660  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : Parameter : [TodoDto(id=null, content=밥먹기, isCompleted=false, createdAt=null)]
+2026-01-13 09:56:02.661  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-13 09:56:02.661  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 09:56:02.666  INFO 6728 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-13 09:56:02.666  INFO 6728 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 09:56:02.666  INFO 6728 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 09:56:02.667  INFO 6728 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-13 09:56:02.667  INFO 6728 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 09:56:07.264  INFO 6728 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : [TodoController.createTodo()] 요청 / ip : 127.0.0.1
+2026-01-13 09:56:07.265  INFO 6728 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.addTodo() 서비스 호출 ==========
+2026-01-13 09:56:07.265  INFO 6728 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : Parameter : [TodoDto(id=null, content=산책하기, isCompleted=false, createdAt=null)]
+2026-01-13 09:56:07.266  INFO 6728 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-13 09:56:07.266  INFO 6728 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 09:56:07.294  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-13 09:56:07.294  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 09:56:07.294  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 09:56:07.299  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : Running Time : 5ms
+2026-01-13 09:56:07.300  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 09:56:10.853  INFO 6728 --- [http-nio-8080-exec-5] com.my.todo.common.aop.LoggingAspect     : [TodoController.updateTodo()] 요청 / ip : 127.0.0.1
+2026-01-13 09:56:10.854  INFO 6728 --- [http-nio-8080-exec-5] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.toggleTodo() 서비스 호출 ==========
+2026-01-13 09:56:10.854  INFO 6728 --- [http-nio-8080-exec-5] com.my.todo.common.aop.LoggingAspect     : Parameter : [TodoDto(id=2, content=null, isCompleted=true, createdAt=null)]
+2026-01-13 09:56:10.861  INFO 6728 --- [http-nio-8080-exec-5] com.my.todo.common.aop.LoggingAspect     : Running Time : 7ms
+2026-01-13 09:56:10.862  INFO 6728 --- [http-nio-8080-exec-5] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 09:56:10.867  INFO 6728 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-13 09:56:10.867  INFO 6728 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 09:56:10.867  INFO 6728 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 09:56:10.869  INFO 6728 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : Running Time : 2ms
+2026-01-13 09:56:10.869  INFO 6728 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 09:56:14.759  INFO 6728 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : [TodoController.deleteTodo()] 요청 / ip : 127.0.0.1
+2026-01-13 09:56:14.760  INFO 6728 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.removeTodo() 서비스 호출 ==========
+2026-01-13 09:56:14.760  INFO 6728 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : Parameter : [3]
+2026-01-13 09:56:14.762  INFO 6728 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : Running Time : 2ms
+2026-01-13 09:56:14.762  INFO 6728 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 09:56:14.767  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-13 09:56:14.767  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 09:56:14.768  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 09:56:14.768  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : Running Time : 0ms
+2026-01-13 09:56:14.769  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 09:56:49.780  INFO 6728 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-13 09:56:49.783  INFO 6728 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 09:56:49.784  INFO 6728 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 09:56:49.785  INFO 6728 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-13 09:56:49.785  INFO 6728 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 11:53:39.844  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-13 11:53:39.855  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 11:53:39.855  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 11:53:39.868  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : Running Time : 13ms
+2026-01-13 11:53:39.868  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 11:56:51.247  INFO 6728 --- [http-nio-8080-exec-5] com.my.todo.common.aop.LoggingAspect     : [TodoController.deleteTodo()] 요청 / ip : 127.0.0.1
+2026-01-13 11:56:51.247  INFO 6728 --- [http-nio-8080-exec-5] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.removeTodo() 서비스 호출 ==========
+2026-01-13 11:56:51.247  INFO 6728 --- [http-nio-8080-exec-5] com.my.todo.common.aop.LoggingAspect     : Parameter : [4]
+2026-01-13 11:56:51.249  INFO 6728 --- [http-nio-8080-exec-5] com.my.todo.common.aop.LoggingAspect     : Running Time : 2ms
+2026-01-13 11:56:51.249  INFO 6728 --- [http-nio-8080-exec-5] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 11:56:51.269  INFO 6728 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-13 11:56:51.269  INFO 6728 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 11:56:51.270  INFO 6728 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 11:56:51.271  INFO 6728 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-13 11:56:51.271  INFO 6728 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 11:56:53.278  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : [TodoController.updateTodo()] 요청 / ip : 127.0.0.1
+2026-01-13 11:56:53.278  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.toggleTodo() 서비스 호출 ==========
+2026-01-13 11:56:53.279  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : Parameter : [TodoDto(id=1, content=null, isCompleted=true, createdAt=null)]
+2026-01-13 11:56:53.280  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-13 11:56:53.280  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 11:56:53.292  INFO 6728 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-13 11:56:53.293  INFO 6728 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 11:56:53.293  INFO 6728 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 11:56:53.294  INFO 6728 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-13 11:56:53.294  INFO 6728 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 11:56:55.415  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : [TodoController.deleteTodo()] 요청 / ip : 127.0.0.1
+2026-01-13 11:56:55.416  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.removeTodo() 서비스 호출 ==========
+2026-01-13 11:56:55.416  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : Parameter : [1]
+2026-01-13 11:56:55.417  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-13 11:56:55.417  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 11:56:55.427  INFO 6728 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-13 11:56:55.427  INFO 6728 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 11:56:55.427  INFO 6728 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 11:56:55.428  INFO 6728 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-13 11:56:55.428  INFO 6728 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 11:56:57.032  INFO 6728 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : [TodoController.updateTodo()] 요청 / ip : 127.0.0.1
+2026-01-13 11:56:57.033  INFO 6728 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.toggleTodo() 서비스 호출 ==========
+2026-01-13 11:56:57.033  INFO 6728 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : Parameter : [TodoDto(id=2, content=null, isCompleted=false, createdAt=null)]
+2026-01-13 11:56:57.033  INFO 6728 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : Running Time : 0ms
+2026-01-13 11:56:57.034  INFO 6728 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 11:56:57.041  INFO 6728 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-13 11:56:57.042  INFO 6728 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 11:56:57.042  INFO 6728 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 11:56:57.043  INFO 6728 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-13 11:56:57.043  INFO 6728 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 11:56:58.704  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : [TodoController.deleteTodo()] 요청 / ip : 127.0.0.1
+2026-01-13 11:56:58.705  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.removeTodo() 서비스 호출 ==========
+2026-01-13 11:56:58.705  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : Parameter : [2]
+2026-01-13 11:56:58.707  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : Running Time : 2ms
+2026-01-13 11:56:58.707  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 11:56:58.712  INFO 6728 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-13 11:56:58.712  INFO 6728 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 11:56:58.712  INFO 6728 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 11:56:58.713  INFO 6728 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-13 11:56:58.713  INFO 6728 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 11:57:04.830  INFO 6728 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : [TodoController.createTodo()] 요청 / ip : 127.0.0.1
+2026-01-13 11:57:04.831  INFO 6728 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.addTodo() 서비스 호출 ==========
+2026-01-13 11:57:04.831  INFO 6728 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : Parameter : [TodoDto(id=null, content=코딩하기, isCompleted=false, createdAt=null)]
+2026-01-13 11:57:04.832  INFO 6728 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-13 11:57:04.832  INFO 6728 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 11:57:04.846  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-13 11:57:04.846  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 11:57:04.846  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 11:57:04.848  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : Running Time : 2ms
+2026-01-13 11:57:04.848  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 11:57:09.497  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : [TodoController.createTodo()] 요청 / ip : 127.0.0.1
+2026-01-13 11:57:09.498  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.addTodo() 서비스 호출 ==========
+2026-01-13 11:57:09.498  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : Parameter : [TodoDto(id=null, content=게임하기, isCompleted=false, createdAt=null)]
+2026-01-13 11:57:09.499  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-13 11:57:09.499  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 11:57:09.522  INFO 6728 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-13 11:57:09.522  INFO 6728 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 11:57:09.522  INFO 6728 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 11:57:09.523  INFO 6728 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-13 11:57:09.523  INFO 6728 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 11:57:13.131  INFO 6728 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : [TodoController.createTodo()] 요청 / ip : 127.0.0.1
+2026-01-13 11:57:13.131  INFO 6728 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.addTodo() 서비스 호출 ==========
+2026-01-13 11:57:13.131  INFO 6728 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : Parameter : [TodoDto(id=null, content=투자하기, isCompleted=false, createdAt=null)]
+2026-01-13 11:57:13.132  INFO 6728 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-13 11:57:13.132  INFO 6728 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 11:57:13.153  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-13 11:57:13.154  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 11:57:13.154  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 11:57:13.155  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-13 11:57:13.155  INFO 6728 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 11:57:14.726  INFO 6728 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : [TodoController.updateTodo()] 요청 / ip : 127.0.0.1
+2026-01-13 11:57:14.726  INFO 6728 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.toggleTodo() 서비스 호출 ==========
+2026-01-13 11:57:14.726  INFO 6728 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : Parameter : [TodoDto(id=6, content=null, isCompleted=true, createdAt=null)]
+2026-01-13 11:57:14.727  INFO 6728 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : Running Time : 0ms
+2026-01-13 11:57:14.727  INFO 6728 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 11:57:14.732  INFO 6728 --- [http-nio-8080-exec-5] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-13 11:57:14.732  INFO 6728 --- [http-nio-8080-exec-5] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 11:57:14.732  INFO 6728 --- [http-nio-8080-exec-5] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 11:57:14.733  INFO 6728 --- [http-nio-8080-exec-5] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-13 11:57:14.733  INFO 6728 --- [http-nio-8080-exec-5] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 13:24:58.277  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-13 13:24:58.283  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 13:24:58.283  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 13:24:58.295  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : Running Time : 11ms
+2026-01-13 13:24:58.295  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : ===================================================================================

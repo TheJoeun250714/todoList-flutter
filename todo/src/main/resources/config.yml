@@ -1,0 +1,28 @@
+# Database Configuration
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/my_game_db
+    username: tuser
+    password: tjee1234
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-timeout: 30000
+      maximum-pool-size: 5
+      idle-timeout: 600000
+      pool-name: MyHikariCP
+      auto-commit: false
+  jpa:
+  hibernate.ddl-auto: update
+
+
+# DBconfig-> properties 로 가능하고, 추가 커스텀 클래스 필요하기 때문에 사용 안함
+
+mybatis:
+  mapper-locations: classpath:/mapper/**/*.xml
+  type-aliases-package: com.my.todo
+  config-location: classpath:/mybatis-config.xml
+
+log:
+  config:
+    path: ./logs/
+    fileName: application

@@ -1,0 +1,27 @@
+name: todo_app
+description: A Todo List application with Flutter and Spring Boot
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+#       3.0.0 이상 4.0.0 이하 ok
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.1.2
+  #       6.1.2 이상 6.1.2 이하 사용불가
+  dio: ^5.4.3
+  cupertino_icons: ^1.0.6
+  flutter_dotenv: ^5.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/ #assets 폴더 내부 images 폴더 내의 모든 파일 사용
