@@ -3,60 +3,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:todo_app/widgets/todolist/error_state.dart';
+import 'package:todo_app/widgets/todolist/statistics_bar.dart';
 import '../common/app_styles.dart';
 import '../common/constants.dart';
 import '../providers/todo_provider.dart';
-import '../widgets/todo_item.dart';
+import '../widgets/todolist/empty_state.dart';
+import '../widgets/todolist/todo_item.dart';
 
-/*
- * TODO: TodoListScreen 위젯 작성
- * 
- * StatefulWidget 상속
- * 
- * initState():
- * - WidgetsBinding.instance.addPostFrameCallback() 사용
- * - TodoProvider의 loadTodos() 호출
- * 
- * _showAddDialog() 메서드:
- * - TextEditingController 생성
- * - AlertDialog 표시
- *   - title: 'New Todo'
- *   - content: TextField (hint: 'What needs to be done?', maxLines: 3)
- *   - actions: 취소, 추가 버튼
- *     - 추가 버튼: provider.addTodo() 호출
- * 
- * build() 메서드:
- * - Scaffold 사용
- * 
- * - AppBar:
- *   - title: AppConstants.appName
- *   - backgroundColor: AppColors.primary
- *   - foregroundColor: Colors.white
- * 
- * - body: Consumer<TodoProvider> 사용
- *   
- *   1. provider.isLoading이면:
- *      - Center에 CircularProgressIndicator 표시
- *   
- *   2. provider.errorMessage가 있으면:
- *      - 에러 아이콘, 메시지, Retry 버튼 표시
- *   
- *   3. provider.todos가 비어있으면:
- *      - 빈 상태 UI 표시 ('No todos yet', 'Tap + to add')
- *   
- *   4. 그 외:
- *      - Column 사용
- *        - 통계 표시 Container (Total, Active, Done)
- *        - Divider
- *        - ListView.builder (RefreshIndicator로 감싸기)
- * 
- * - floatingActionButton:
- *   - onPressed: _showAddDialog() 호출
- * 
- * _buildStatCard() 메서드:
- * - 통계 카드 위젯 반환
- * - 숫자와 라벨 표시
- */
 
 class TodoListScreen extends StatefulWidget {
   const TodoListScreen({super.key});
@@ -125,61 +79,20 @@ class _TodoListScreenState extends State<TodoListScreen> {
           }
 
           if (provider.errorMessage != null) {
-            return Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(
-                    Icons.error_outline,
-                    size: 64,
-                    color: Colors.red,
-                  ),
-                  const SizedBox(height: 16),
-                  Text(
-                    provider.errorMessage!,
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(color: Colors.red),
-                  ),
-                  const SizedBox(height: 16),
-                  FilledButton(
-                    onPressed: () => provider.loadTodos(),
-                    child: const Text('Retry'),
-                  ),
-                ],
-              ),
+            return  ErrorState(
+              message: provider.errorMessage!,
+              onRetry: () => provider.loadTodos(),
             );
           }
 
           if (provider.todos.isEmpty) {
-            return Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.inbox_outlined,
-                    size: 80,
-                    color: Colors.grey[400],
-                  ),
-                  const SizedBox(height: 16),
-                  Text(
-                    'No todos yet',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.grey[600],
-                    ),
-                  ),
-                  const SizedBox(height: 8),
-                  Text(
-                    'Tap + to add a new todo',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.grey[500],
-                    ),
-                  ),
-                ],
-              ),
+            return  const EmptyState(
+              icon: Icons.inbox_outlined,
+              mainText: 'No todos yet',
+              subText: 'Tap + to add a new todo',
             );
           }
+
 
           return Column(
             children: [
@@ -188,6 +101,13 @@ class _TodoListScreenState extends State<TodoListScreen> {
                 color: Colors.white,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                 children: [
+                   StatisticsBar(
+                       totalCount: provider.totalCount,
+                       activeCount: provider.activeCount,
+                       completedCount: provider.completedCount)
+                 ],
+                 /*
                   children: [
                     _buildStatCard(
                       'Total',
@@ -205,6 +125,7 @@ class _TodoListScreenState extends State<TodoListScreen> {
                       Colors.green,
                     ),
                   ],
+                */
                 ),
               ),
               const Divider(height: 1),
@@ -228,29 +149,6 @@ class _TodoListScreenState extends State<TodoListScreen> {
         onPressed: () => _showAddDialog(context),
         child: const Icon(Icons.add),
       ),
-    );
-  }
-
-  Widget _buildStatCard(String label, String count, Color color) {
-    return Column(
-      children: [
-        Text(
-          count,
-          style: TextStyle(
-            fontSize: 28,
-            fontWeight: FontWeight.bold,
-            color: color,
-          ),
-        ),
-        const SizedBox(height: 4),
-        Text(
-          label,
-          style: TextStyle(
-            fontSize: 14,
-            color: Colors.grey[700],
-          ),
-        ),
-      ],
     );
   }
 }

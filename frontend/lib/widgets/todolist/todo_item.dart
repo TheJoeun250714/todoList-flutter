@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../common/app_styles.dart';
-import '../common/constants.dart';
-import '../providers/todo_provider.dart';
-import '../models/todo_model.dart';
+import '../../common/app_styles.dart';
+import '../../common/constants.dart';
+import '../../providers/todo_provider.dart';
+import '../../models/todo_model.dart';
 
 class TodoItem extends StatelessWidget {
   final TodoModel todo;
