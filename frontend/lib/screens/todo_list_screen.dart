@@ -3,6 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:todo_app/widgets/todolist/add_todo_dialog.dart';
 import 'package:todo_app/widgets/todolist/error_state.dart';
 import 'package:todo_app/widgets/todolist/statistics_bar.dart';
 import '../common/app_styles.dart';
@@ -10,7 +11,6 @@ import '../common/constants.dart';
 import '../providers/todo_provider.dart';
 import '../widgets/todolist/empty_state.dart';
 import '../widgets/todolist/todo_item.dart';
-
 
 class TodoListScreen extends StatefulWidget {
   const TodoListScreen({super.key});
@@ -29,39 +29,11 @@ class _TodoListScreenState extends State<TodoListScreen> {
   }
 
   void _showAddDialog(BuildContext context) {
-    final controller = TextEditingController();
-
     showDialog(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        title: const Text('New Todo'),
-        content: TextField(
-          controller: controller,
-          decoration: const InputDecoration(
-            hintText: 'What needs to be done?',
-            border: OutlineInputBorder(),
-          ),
-          autofocus: true,
-          maxLines: 3,
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(ctx),
-            child: const Text('Cancel'),
-          ),
-          FilledButton(
-            onPressed: () {
-              if (controller.text.trim().isNotEmpty) {
-                Provider.of<TodoProvider>(context, listen: false)
-                    .addTodo(controller.text.trim());
-                Navigator.pop(ctx);
-              }
-            },
-            child: const Text('Add'),
-          ),
-        ],
-      ),
-    );
+        context: context,
+        builder: (context) => AddTodoDialog(onAdd: (text) {
+              Provider.of<TodoProvider>(context, listen: false).addTodo(text);
+            }));
   }
 
   @override
@@ -79,20 +51,19 @@ class _TodoListScreenState extends State<TodoListScreen> {
           }
 
           if (provider.errorMessage != null) {
-            return  ErrorState(
+            return ErrorState(
               message: provider.errorMessage!,
               onRetry: () => provider.loadTodos(),
             );
           }
 
           if (provider.todos.isEmpty) {
-            return  const EmptyState(
+            return const EmptyState(
               icon: Icons.inbox_outlined,
               mainText: 'No todos yet',
               subText: 'Tap + to add a new todo',
             );
           }
-
 
           return Column(
             children: [
@@ -101,31 +72,12 @@ class _TodoListScreenState extends State<TodoListScreen> {
                 color: Colors.white,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                 children: [
-                   StatisticsBar(
-                       totalCount: provider.totalCount,
-                       activeCount: provider.activeCount,
-                       completedCount: provider.completedCount)
-                 ],
-                 /*
                   children: [
-                    _buildStatCard(
-                      'Total',
-                      provider.totalCount.toString(),
-                      Colors.blue,
-                    ),
-                    _buildStatCard(
-                      'Active',
-                      provider.activeCount.toString(),
-                      Colors.orange,
-                    ),
-                    _buildStatCard(
-                      'Done',
-                      provider.completedCount.toString(),
-                      Colors.green,
-                    ),
+                    StatisticsBar(
+                        totalCount: provider.totalCount,
+                        activeCount: provider.activeCount,
+                        completedCount: provider.completedCount)
                   ],
-                */
                 ),
               ),
               const Divider(height: 1),

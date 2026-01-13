@@ -5,18 +5,41 @@ class StatisticsBar extends StatelessWidget {
   final int activeCount;
   final int completedCount;
 
-  const StatisticsBar ({
-  super.key, // StatelessWidget 에 기본으로 존재하는 변수들 포함해서 사용!
-  required this.totalCount,
-  required this.activeCount,
-  required this.completedCount,
+  const StatisticsBar({
+    super.key, // StatelessWidget 에 기본으로 존재하는 변수들 포함해서 사용!
+    required this.totalCount,
+    required this.activeCount,
+    required this.completedCount,
 
   });
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return Container(
+      padding: const EdgeInsets.all(16),
+      color: Colors.white,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+
+        children: [
+          StatCard(
+            label: 'Total',
+            count: totalCount.toString(),
+            color: Colors.blue,
+          ),
+          StatCard(
+            label: 'Active',
+            count: activeCount.toString(),
+            color: Colors.orange,
+          ),
+          StatCard(
+            label: 'Done',
+            count: completedCount.toString(),
+            color: Colors.green,
+          ),
+        ],
+      ),
+    );
   }
 
 // TODO: 구현
