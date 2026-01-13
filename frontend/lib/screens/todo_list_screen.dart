@@ -3,6 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:todo_app/screens/theme_setting_screen.dart';
 import 'package:todo_app/widgets/todolist/add_todo_dialog.dart';
 import 'package:todo_app/widgets/todolist/error_state.dart';
 import 'package:todo_app/widgets/todolist/statistics_bar.dart';
@@ -41,6 +42,12 @@ class _TodoListScreenState extends State<TodoListScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('My Todo List 2026'),
+        actions: [
+          IconButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const ThemeSettingScreen()));
+            
+          }, icon: const Icon(Icons.palette_outlined))
+        ],
       ),
       body: Consumer<TodoProvider>(
         builder: (context, provider, child) {

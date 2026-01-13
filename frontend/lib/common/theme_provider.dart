@@ -25,7 +25,19 @@ class ThemeProvider with ChangeNotifier {
   ThemeData get themeData {
     switch (_currentTheme) {
       case AppThemeType.purple:
-        return _buildTheme
+        return _buildTheme(
+            primary: const Color(0xFF6200EE),
+            secondary: const Color(0xFF03DAC6)
+        );
+        case AppThemeType.pink:
+        return _buildTheme(
+            primary: const Color(0xFFE91E63),
+            secondary: const Color(0xFF03DAC6)
+        );
+      case AppThemeType.blue:
+        return _buildTheme(
+            primary: const Color(0xFF2196F3),
+            secondary: const Color(0xFF00BCD4));
     }
   }
 
