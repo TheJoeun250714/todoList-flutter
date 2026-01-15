@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:todo_app/common/theme_provider.dart';
+import 'package:todo_app/providers/theme_provider.dart';
 import 'package:todo_app/widgets/theme/theme_card.dart';
 import 'package:todo_app/widgets/theme/theme_purchase_dialog.dart';
 
@@ -15,6 +15,8 @@ class ThemeList extends StatelessWidget {
       (AppThemeType.purple, const Color(0xFF6200EE)),
       (AppThemeType.pink, const Color(0xFFE91E63)),
       (AppThemeType.blue, const Color(0xFF2196F3)),
+      (AppThemeType.light, const Color(0xFFf5f5f5)),
+      (AppThemeType.dark, const Color(0xFF212121)),
     ];
 
     return ListView(

@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:todo_app/common/theme_provider.dart';
+import 'package:todo_app/providers/theme_provider.dart';
 import 'common/app_styles.dart';
 import 'common/constants.dart';
 import 'providers/todo_provider.dart';
@@ -17,7 +17,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MultiProvider(

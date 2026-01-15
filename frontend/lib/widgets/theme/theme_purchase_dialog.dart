@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:todo_app/common/theme_provider.dart';
+import 'package:todo_app/providers/theme_provider.dart';
 
 class ThemePurchaseDialog extends StatelessWidget {
   final ThemeProvider themeProvider;
@@ -20,16 +20,12 @@ class ThemePurchaseDialog extends StatelessWidget {
         FilledButton(
             onPressed: () async {
               Navigator.pop(context);
-
               showDialog(
                   context: context,
                   builder: (_) => const Center(child: CircularProgressIndicator()));
-
               final success = await themeProvider.purchaseTheme(theme);
-
               if (context.mounted) {
                 Navigator.pop(context); //로딩 닫기
-
                 if (success) {
                   themeProvider.changTheme(theme);
                   ScaffoldMessenger.of(context).showSnackBar(const SnackBar(

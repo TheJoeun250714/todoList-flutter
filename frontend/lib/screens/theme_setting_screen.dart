@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:todo_app/common/theme_provider.dart';
+import 'package:todo_app/providers/theme_provider.dart';
 import 'package:todo_app/widgets/theme/theme_list.dart';
 /*
 lib

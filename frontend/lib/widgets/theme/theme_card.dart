@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:todo_app/common/theme_provider.dart';
+import 'package:todo_app/providers/theme_provider.dart';
 /*
 onTap = 제스처 감지 위젯 -> 모든 위젯을 클릭 가능하게 만들 수 있음 <a>
      => 개발자가 만든 커스텀 위젯을 클릭 가능하게 만들기 위해서 사용
@@ -84,7 +84,7 @@ class ThemeCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         //  테마 선택할 때 구매한 거면 적용 , 구매전이면 구매하기 버튼 호출
         // splashColor: Colors.blue.withOpacity(0.3),
-        splashColor: Colors.blue.withValues(alpha: 0.3),
+        splashColor: Colors.blue.withValues(alpha: 0.3, red: 0.8, green: 0.6, blue: 0.9),
         // highlightColor: Colors.grey.withOpacity(0.2),
         highlightColor: Colors.grey.withValues(alpha: 0.2),
         onTap: isPurchased

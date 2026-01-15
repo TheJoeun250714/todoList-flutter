@@ -1124,3 +1124,18 @@ java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigin
 2026-01-13 13:24:58.283  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : Parameter : []
 2026-01-13 13:24:58.295  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : Running Time : 11ms
 2026-01-13 13:24:58.295  INFO 6728 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 14:23:25.006  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-13 14:23:25.007  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 14:23:25.007  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 14:23:25.013  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : Running Time : 5ms
+2026-01-13 14:23:25.013  INFO 6728 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 14:26:09.445  INFO 6728 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 0:0:0:0:0:0:0:1
+2026-01-13 14:26:09.446  INFO 6728 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 14:26:09.446  INFO 6728 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 14:26:09.448  INFO 6728 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : Running Time : 2ms
+2026-01-13 14:26:09.448  INFO 6728 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-13 14:47:53.572  INFO 6728 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-13 14:47:53.573  INFO 6728 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-13 14:47:53.573  INFO 6728 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-13 14:47:53.579  INFO 6728 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : Running Time : 6ms
+2026-01-13 14:47:53.579  INFO 6728 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
