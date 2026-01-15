@@ -44,7 +44,7 @@ class _MapWidgetState extends State<MapWidget> {
             padding:0;
           }
           iframe{
-            width:100%,
+            width:100%;
             height:100vh;
             border:0;
           }

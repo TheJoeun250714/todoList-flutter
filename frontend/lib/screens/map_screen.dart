@@ -12,6 +12,7 @@ lib
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:todo_app/widgets/map/html_map_widget.dart';
 
 import '../widgets/map/location_info_widget.dart';
 import '../widgets/map/map_widget.dart';
@@ -34,7 +35,7 @@ class MapScreen  extends StatelessWidget{
       ),
       body: const Column(
         children: [LocationInfoWidget(),
-          Expanded(child: MapWidget()),
+          Expanded(child: HtmlMapWidget()),
           TransportInfoWidget()],
       ),
     );

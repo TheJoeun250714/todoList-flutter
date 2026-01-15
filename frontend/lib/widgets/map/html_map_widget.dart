@@ -21,14 +21,14 @@ class _HtmlMapWidgetState extends State<HtmlMapWidget> {
   void initState() {
     super.initState();
     if (kIsWeb) {
-      _getMapHtml();
+      _registerViewFactory();
     }
   }
 
-  void _getMapHtml() {
+  void _registerViewFactory() {
     ui_web.platformViewRegistry.registerViewFactory(viewId, (int viewId) {
       final iframe = html.IFrameElement()
-        ..src = ''
+        ..src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.8206470718287!2d126.9783154807531!3d37.55928917422072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2f516e5887d%3A0xcd371b16a3ec2061!2z64Ko64yA66y47Iuc7J6l!5e0!3m2!1sko!2skr!4v1768445411111!5m2!1sko!2skr'
         ..style.border = "none"
         ..style.width = '100%'
         ..style.height = '100%'
