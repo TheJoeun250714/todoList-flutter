@@ -1,6 +1,5 @@
 
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:todo_app/widgets/map/transport_info_item.dart';
 
@@ -12,7 +11,7 @@ class TransportInfoWidget  extends StatelessWidget{
   Widget build(BuildContext context) {
     return Container(
       // padding 상하좌우모두 20
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: Colors.grey[50],
         border: Border(

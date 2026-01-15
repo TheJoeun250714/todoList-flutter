@@ -9,3 +9,34 @@ lib
 └────screen/
       └────map_screen.dart   # 메인 페이지
  */
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+import '../widgets/map/location_info_widget.dart';
+import '../widgets/map/map_widget.dart';
+import '../widgets/map/transport_info_widget.dart';
+
+class MapScreen  extends StatelessWidget{
+  const MapScreen({super.key});
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: const Text("오시는 길"),
+        centerTitle: true,
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black87,
+        elevation: 0,
+      ),
+      body: const Column(
+        children: [LocationInfoWidget(),
+          Expanded(child: MapWidget()),
+          TransportInfoWidget()],
+      ),
+    );
+  }
+}
