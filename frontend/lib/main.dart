@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_app/providers/theme_provider.dart';
 import 'package:todo_app/screens/map_screen.dart';
+import 'package:todo_app/screens/scaffold_screen.dart';
 import 'common/app_styles.dart';
 import 'common/constants.dart';
 import 'providers/todo_provider.dart';
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
             title: AppConstants.appName,
             theme: themeProvider.themeData,
            // home: const TodoListScreen(),
-            home: const MapScreen(),
+           // home: const MapScreen(),
+            home: const ScaffoldScreen(),
           );
         },
       ),

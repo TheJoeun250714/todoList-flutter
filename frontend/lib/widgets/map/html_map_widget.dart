@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-
+/*
 // 어플이라해서 chrome 이나 edge 에서 못보는 것이 아님! 방법은 있으나 반대로 app 에서는 안보임
 import 'dart:ui_web' as ui_web; // dart:ui_web 기본 모듈을 줄여서 ui_web 변수로 사용하겠다.
 import 'dart:html' as html;
@@ -54,3 +54,4 @@ class _HtmlMapWidgetState extends State<HtmlMapWidget> {
               ));
   }
 }
+*/

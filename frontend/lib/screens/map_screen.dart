@@ -18,9 +18,8 @@ import '../widgets/map/location_info_widget.dart';
 import '../widgets/map/map_widget.dart';
 import '../widgets/map/transport_info_widget.dart';
 
-class MapScreen  extends StatelessWidget{
+class MapScreen extends StatelessWidget{
   const MapScreen({super.key});
-
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +34,7 @@ class MapScreen  extends StatelessWidget{
       ),
       body: const Column(
         children: [LocationInfoWidget(),
-          Expanded(child: HtmlMapWidget()),
+          Expanded(child: MapWidget()),
           TransportInfoWidget()],
       ),
     );
