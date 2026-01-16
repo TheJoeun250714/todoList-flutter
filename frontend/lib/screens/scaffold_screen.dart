@@ -12,6 +12,7 @@ class ScaffoldScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text('Body 위치'),
             ElevatedButton(
@@ -19,7 +20,7 @@ class ScaffoldScreen extends StatelessWidget {
                   ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                       content: Text("현재 위치 Scaffold에서 보여줄 메신저입니다.")));
                 },
-                child: const Text("화면 구경하기"))
+                child: const Text("버튼 클릭하기"))
           ],
         ),
       ),
@@ -56,12 +57,14 @@ class ScaffoldScreen extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () {
+      floatingActionButton: FloatingActionButton(
+          onPressed: () {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
           content: Text("제가 보이십니까?!"),
           duration: Duration(seconds: 2),
         ));
-      }),
+      },
+      child: Icon(Icons.balcony),),
       bottomNavigationBar: BottomNavigationBar(items: const [
         BottomNavigationBarItem(icon: Icon(Icons.storage), label: '창고'),
         BottomNavigationBarItem(icon: Icon(Icons.build), label: '설정'),
