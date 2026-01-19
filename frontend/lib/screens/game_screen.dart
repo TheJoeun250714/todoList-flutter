@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:todo_app/widgets/games/game_area_widget.dart';
+import 'package:todo_app/widgets/games/ground_widget.dart';
+import 'package:todo_app/widgets/games/score_widget.dart';
+
+import '../providers/game_provider.dart';
 /*
 lib
 ├────main.dart                        # 어플 시작점
@@ -39,14 +45,30 @@ lib
 
 
  */
-class game_screen extends StatelessWidget {
-  const game_screen({super.key});
-
+class GameScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('game_screen is working'),
+    return GestureDetector(
+      onTap: () {
+        final game = context.read<GameProvider>();
+
+        if(!game.gameStarted){
+          game.startGame();
+        }
+
+        game.jump();
+      },
+      child: Scaffold(
+        body: Column(
+          children: [
+            ScoreWidget(),
+            const Expanded(
+              flex: 5, //화면 전체의 5/8 영역 차지
+              child: GameArea(),
+            ),
+            const GroundWidget()
+          ],
+        ),
       ),
     );
   }

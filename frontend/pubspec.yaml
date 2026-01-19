@@ -9,7 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  provider: ^6.1.2
+  provider: ^6.1.5+1
   #       6.1.2 이상 6.1.2 이하 사용불가
   dio: ^5.4.3
   cupertino_icons: ^1.0.6

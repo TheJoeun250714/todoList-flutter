@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:todo_app/providers/game_provider.dart';
 import 'package:todo_app/providers/theme_provider.dart';
 import 'package:todo_app/screens/font_screen.dart';
+import 'package:todo_app/screens/game_screen.dart';
 import 'package:todo_app/screens/map_screen.dart';
 import 'package:todo_app/screens/scaffold_screen.dart';
 import 'common/app_styles.dart';
@@ -17,6 +19,21 @@ void main() {
   runApp(const MyApp());
 }
 
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return
+        ChangeNotifierProvider(
+            create: (_) => GameProvider(),
+            child: MaterialApp(
+              home:GameScreen(),
+                    ),
+
+    );
+  }
+}
+/*
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
@@ -42,6 +59,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+*/
 /*
   @override
   Widget build(BuildContext context) {
