@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:todo_app/providers/game_provider.dart';
 import 'package:todo_app/providers/theme_provider.dart';
-import 'package:todo_app/screens/game_screen.dart';
+import 'package:todo_app/screens/font_screen.dart';
 import 'package:todo_app/screens/map_screen.dart';
 import 'package:todo_app/screens/scaffold_screen.dart';
 import 'common/app_styles.dart';
@@ -20,26 +19,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-        create: (_) => GameProvider(),
-        /*
-        * Consumer<GameProvider>( 와
-        * builder: (context, gameProvider, child) 를
-        * 이쪽에서 작성하지 않고
-        * GameScreen 에서 작성한 의도 확인
-        * */
-        child: const MaterialApp(
-          debugShowCheckedModeBanner: false,
-          home: GameScreen(),
-        ));
-  }
-}
-/*
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -55,14 +34,14 @@ class MyApp extends StatelessWidget {
             theme: themeProvider.themeData,
            // home: const TodoListScreen(),
            // home: const MapScreen(),
-            home: const ScaffoldScreen(),
+           // home: const ScaffoldScreen(),
+            home: const FontScreen(),
           );
         },
       ),
     );
   }
 }
-*/
 /*
   @override
   Widget build(BuildContext context) {

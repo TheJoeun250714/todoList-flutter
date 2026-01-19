@@ -16,7 +16,11 @@ dependencies:
   flutter_dotenv: ^5.1.0
   web: ^1.1.1
   webview_flutter: ^4.4.4
-
+  google_fonts: ^7.0.2
+# 버전은 모르나 모듈을 추가하고 싶을 때 하는 방법
+# flutter pub add 모듈이름
+# flutter pub get 자동으로 실행
+# flutter pub remove 모듈이름 필요없을 경우 제거 가능
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -27,3 +31,8 @@ flutter:
 
   assets:
     - assets/images/ #assets 폴더 내부 images 폴더 내의 모든 파일 사용
+  #assets 을 추가하면 pub get으로 반드시 추가된세팅이 반영될 수있도록 해주어야한다.
+  fonts:
+    - family: Pretendard
+      fonts:
+        - asset: assets/fonts/PretendardVariable.ttf
