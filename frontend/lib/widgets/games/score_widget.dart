@@ -12,7 +12,7 @@ class ScoreWidget extends StatelessWidget {
     final game = context.watch<GameProvider>();
 
     return Expanded(
-      flex: 2,
+      flex: 1,
       child: Container(
         color: Colors.blue[300],
         child: Center(

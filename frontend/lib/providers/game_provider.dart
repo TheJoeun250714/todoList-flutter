@@ -91,13 +91,13 @@ class GameProvider extends ChangeNotifier {
   // 게임을 처음 상태로 리셋하는 메서드
   // 게임 종료 후 다시 시작할 때 호출됨
   void resetGame() {
-    double birdY = 0;
-    double time = 0;
-    double height = 0;
-    double initialHeight = 0;
-    bool gameStarted = false;
-    int score = 0;
-    double barrierX = 2;
+    birdY = 0;
+    time = 0;
+    height = 0;
+    initialHeight = 0;
+    gameStarted = false;
+    score = 0;
+    barrierX = 2;
     notifyListeners();
   }
 }

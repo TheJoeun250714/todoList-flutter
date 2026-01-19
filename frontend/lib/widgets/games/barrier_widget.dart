@@ -14,7 +14,7 @@ class BarrierWidget extends StatelessWidget {
         // TODO: 위쪽 장애물
         AnimatedContainer(
           duration: Duration(milliseconds: 0),
-          alignment: Alignment(game.barrierX, -1.1),
+          alignment: Alignment(game.barrierX, -1.0),
           child: Container(
             width: 80, /* 장애물 너비 */
             height: game.barrierHeight,

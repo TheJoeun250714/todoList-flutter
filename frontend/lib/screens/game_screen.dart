@@ -63,7 +63,7 @@ class GameScreen extends StatelessWidget {
           children: [
             ScoreWidget(),
             const Expanded(
-              flex: 5, //화면 전체의 5/8 영역 차지
+              flex: 6, //화면 전체의 5/8 영역 차지
               child: GameArea(),
             ),
             const GroundWidget()
