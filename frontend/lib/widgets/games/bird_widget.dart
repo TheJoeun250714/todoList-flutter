@@ -8,7 +8,6 @@ class BirdWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final birdY = context.watch<GameProvider>().birdY;
-
     return AnimatedContainer(
       duration: const Duration(milliseconds: 0),
       alignment: Alignment(0, birdY),

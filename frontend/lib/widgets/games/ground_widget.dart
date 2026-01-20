@@ -8,8 +8,8 @@ class GroundWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      flex: 1, // 전체 화면의 1/8 차지
-      child: Container(color:Colors.brown)
+        flex: 1,
+        child: Container(color:Colors.brown)
     );
   }
 }

@@ -8,17 +8,14 @@ class GameArea extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        // TODO: BackgroundWidget (파란 배경)
-        const BackgroundWidget(),
-        // TODO: BirdWidget
-        BirdWidget(),
-        // TODO: BarrierWidget
-        BarrierWidget(),
-        // TODO: GameOverListener
-
-      ],
-    );
+    return Expanded(
+        flex: 6,
+        child: Stack(
+          children: [
+            const BackgroundWidget(),
+            BirdWidget(),
+            BarrierWidget(),
+          ],
+        ));
   }
 }

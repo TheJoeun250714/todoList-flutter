@@ -100,4 +100,42 @@ class GameProvider extends ChangeNotifier {
     barrierX = 2;
     notifyListeners();
   }
+
+  // 화면을 꾹 누르고 있는지 여부
+  bool isHolding = false;
+
+  // 게임 시작 후 경과 시간(초)
+  double gameTime = 0;
+
+  // 목표 시간 (초) - 이 시간에 도달하면 게임 종료
+  final double targetTime = 60.0;
+
+  // 목표 점수 - 이 점수에 도달하면 게임 종료
+  final int targetScore = 20;
+
+  // 장애물 통과 여부 체크 (중복 점수 방지)
+  bool hasPassedBarrier = false;
+
+  // 이전 프레임에서 충돌 상태였는가 (중복 감점 방지)
+  bool wasColliding = false;
+
+  // 꾹 누르기 시작
+  void startHolding() {
+    isHolding = true;
+    time = 0;
+    initialHeight = birdY;
+  }
+
+  // 꾹 누르기 종료
+  void stopHolding() {
+    isHolding = false;
+    time = 0;
+    initialHeight = birdY;
+  }
+
+  // 남은 시간 (초)
+  double get remainingTime => targetTime - gameTime;
+
+  // 남은 점수 (목표까지)
+  int get remainingScore => targetScore - score;
 }

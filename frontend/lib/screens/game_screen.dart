@@ -5,6 +5,7 @@ import 'package:todo_app/widgets/games/ground_widget.dart';
 import 'package:todo_app/widgets/games/score_widget.dart';
 
 import '../providers/game_provider.dart';
+
 /*
 lib
 ├────main.dart                        # 어플 시작점
@@ -52,21 +53,18 @@ class GameScreen extends StatelessWidget {
       onTap: () {
         final game = context.read<GameProvider>();
 
-        if(!game.gameStarted){
+        if (!game.gameStarted) {
           game.startGame();
         }
 
         game.jump();
       },
-      child: Scaffold(
+      child: const Scaffold(
         body: Column(
           children: [
             ScoreWidget(),
-            const Expanded(
-              flex: 6, //화면 전체의 5/8 영역 차지
-              child: GameArea(),
-            ),
-            const GroundWidget()
+            GameArea(),
+            GroundWidget(),
           ],
         ),
       ),

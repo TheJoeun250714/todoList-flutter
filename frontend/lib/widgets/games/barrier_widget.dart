@@ -8,12 +8,10 @@ class BarrierWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final game = context.watch<GameProvider>();
-
     return Stack(
       children: [
-        // TODO: 위쪽 장애물
         AnimatedContainer(
-          duration: Duration(milliseconds: 0),
+          duration: const Duration(milliseconds: 0),
           alignment: Alignment(game.barrierX, -1.0),
           child: Container(
             width: 80, /* 장애물 너비 */
@@ -21,10 +19,8 @@ class BarrierWidget extends StatelessWidget {
             color:Colors.green[700],
           ),
         ),
-
-        // TODO: 아래쪽 장애물
         AnimatedContainer(
-          duration: Duration(milliseconds: 0),
+          duration: const Duration(milliseconds: 0),
           alignment: Alignment(game.barrierX, 1.1),
           child: Container(
             width: 80,
