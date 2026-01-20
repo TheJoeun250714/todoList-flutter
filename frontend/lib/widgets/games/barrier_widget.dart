@@ -5,6 +5,8 @@ import 'package:provider/provider.dart';
 import '../../providers/game_provider.dart';
 
 class BarrierWidget extends StatelessWidget {
+  const BarrierWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     final game = context.watch<GameProvider>();

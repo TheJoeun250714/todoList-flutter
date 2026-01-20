@@ -39,18 +39,16 @@ class _GameOverListenerState extends State<GameOverListener> {
   }
 
   void _showGameOverDialog(BuildContext context, GameProvider game) {
-    // TODO 과제 2: 게임 종료 이유 판단
-    // 힌트 1: game.gameTime >= game.targetTime 이면 시간 종료
+    String msg;
+
     if (game.gameTime >= game.targetTime) {
-      print("시간종료!");
+      msg = '시간 종료 \n최종 점수 : ${game.score}';
     } else if (game.score >= game.targetScore) {
-      print("목표 달성!");
+      msg = '목표 달성 \n축하합니다. ^^';
     } else {
-      print("게임 오버!");
+      msg = '게임 오버 \n최종 점수 : ${game.score}';
     }
 
-    // TODO 과제 3: AlertDialog 작성
-    // 힌트: showDialog 함수를 사용하세요
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
@@ -58,11 +56,21 @@ class _GameOverListenerState extends State<GameOverListener> {
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text(
-              "메세지",
+            // const Text( msg를 작성하고 싶다면
+            //  String msg 변수 앞에 const String msg 상수 변할 수 없는 글자데이터
+            // 형태로 작성해야함
+            // Text 글자가 변동이 있는 글자이기 때문에 const Text
+            // 로 고정해서 사용할 수 없음
+            Text(
+              msg,
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 16),
+            // 플레이 시간 내부에 변수가 없거나 변하는 데이터가 없으면
+            // const 가능
+            // const Text('플레이 시간 :초')
+            // 하지만 아래와 같이 플레이시간 :  옆에 초가 변한다면
+            //변수 상태의 Text 이기 때문에 const 사용 불가
             Text('플레이 시간 : ${game.gameTime.toStringAsFixed(1)}초')
           ],
         ),
@@ -77,9 +85,5 @@ class _GameOverListenerState extends State<GameOverListener> {
         ],
       ),
     );
-    // 힌트: AlertDialog의 구성요소
-    //   - title: 게임 종료 텍스트
-    //   - content: 종료 메시지와 플레이 시간
-    //   - actions: 다시 시작 버튼 (game.resetGame() 호출)
   }
 }
