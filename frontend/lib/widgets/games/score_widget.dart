@@ -16,14 +16,31 @@ class ScoreWidget extends StatelessWidget {
     return Expanded(
       flex: 1,
       child: Container(
-        color: Colors.blue[300],
-        child: Center(
-          child: Text(
-            game.gameStarted ? '점수 :${game.score}' : '탭하여 시작',
-            style: const TextStyle(fontSize: 30, color: Colors.white),
-          ),
-        ),
-      ),
+          color: Colors.blue[300],
+          child: Center(
+              child: game.gameStarted
+                  ? Column(children: [
+                      Text(
+                        game.gameStarted ? '점수 :${game.score}' : '탭하여 시작',
+                        style:
+                            const TextStyle(fontSize: 30, color: Colors.white),
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        '시간 : ${game.remainingTime.toStringAsFixed(1)}',
+                        style: const TextStyle(
+                            fontSize: 30, color: Colors.white70),
+                      ),
+                      Text(
+                        '목표 : ${game.targetScore}점',
+                        style: const TextStyle(
+                            fontSize: 30, color: Colors.white60),
+                      ),
+                    ])
+                  : const Text(
+                      '탭하여 시작',
+                      style: TextStyle(fontSize: 30, color: Colors.white),
+                    ))),
     );
   }
 }

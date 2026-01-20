@@ -50,7 +50,22 @@ class GameScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      // 꾹 누르기 시작 종료
+      onLongPressStart: (_){
+        // 현재 유저가 꾹 눌렀을 때 게임의 상태 확인
+        final game = context.read<GameProvider>();
+        if(game.gameStarted) {
+          game.startHolding();
+        }
+      },
+
+      onLongPressEnd: (_){
+        // 현재 유저가 꾹 누르기를 종료했을 때 게임의 상태 확인
+        final game = context.read<GameProvider>();
+        game.stopHolding();
+      },
       onTap: () {
+        // 현재 유저가 한 번 터치했을 때 게임의 상태는
         final game = context.read<GameProvider>();
 
         if (!game.gameStarted) {
