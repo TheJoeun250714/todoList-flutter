@@ -53,7 +53,6 @@ class GameProvider extends ChangeNotifier {
   // 이전 프레임에서 충돌 상태였는가 (중복 감점 방지)
   bool wasColliding = false;
 
-
   // 2-2 ~ 2-6
   // ============= 게임 메서드들 =============
   // 게임을 시작하는 메서드
@@ -66,29 +65,29 @@ class GameProvider extends ChangeNotifier {
       gameTime += 0.05; //게임 시간 증가
 
       // 목표 시간 도달 시 게임 종료
-      if(gameTime >= targetTime) {
+      if (gameTime >= targetTime) {
         stopGame();
         return;
       }
       // 목표 점수 도달 시 게임 종료
-      if(score >= targetScore) {
+      if (score >= targetScore) {
         stopGame();
         return;
       }
       // 꾹 누르기 로직
-      if(isHolding) {
+      if (isHolding) {
         // 최대 높이에 도달하지 않았을 때만 상승
-        if(birdY > -0.9) {
+        if (birdY > -0.9) {
           birdY -= 0.03;
           time = 0;
-          initialHeight=birdY;
+          initialHeight = birdY;
         } else {
           // 최대 높이에 도달하면 그 위치 유지
           birdY = -0.9;
           time = 0;
           initialHeight = birdY;
         }
-      }else {
+      } else {
         //  일반 탭의 경우
         time += 0.04;
         height = initialHeight - 4.9 * time * time;
@@ -104,7 +103,7 @@ class GameProvider extends ChangeNotifier {
         barrierX -= 0.05; // 장애물 왼쪽으로 지나가는 듯한 이동  처리
 
         // 장애물 화면 중앙을 지나가면 통과 플래그 리셋
-        if(barrierX < 0 && hasPassedBarrier) {
+        if (barrierX < 0 && hasPassedBarrier) {
           hasPassedBarrier = false;
         }
       }
@@ -117,14 +116,15 @@ class GameProvider extends ChangeNotifier {
       }
     });
   }
-  void _checkCollision(){
-      // 장애물이 새 근처에 있을 때
-    if(barrierX < 0.2 && barrierX > -0.2) {
+
+  void _checkCollision() {
+    // 장애물이 새 근처에 있을 때
+    if (barrierX < 0.2 && barrierX > -0.2) {
       // 장애물과 충돌했을 때 (위쪽 또는 아래쪽 장애물)
-      if(birdY < -0.3 || birdY > 0.3){
+      if (birdY < -0.3 || birdY > 0.3) {
         // 이전에 충돌 상태가 아니었다면 점수 감소
-        if(!wasColliding) {
-          score = score > 0 ? score -1 : 0; //점수가 음수되지 않도록 처리
+        if (!wasColliding) {
+          score = score > 0 ? score - 1 : 0; //점수가 음수되지 않도록 처리
           wasColliding = true;
         }
       } else {
@@ -134,6 +134,7 @@ class GameProvider extends ChangeNotifier {
       wasColliding = false;
     }
   }
+
   // 새를 점프시키는 메서드
   // 화면을 탭 할 때마다 호출됨
   void jump() {
@@ -146,9 +147,12 @@ class GameProvider extends ChangeNotifier {
   // @return true : 게임 오버 false : 계속 진행
   bool _checkGameOver() {
     if (birdY > 1.0 || birdY < -1.0) return true;
+    /*
+    // 충돌 시 게임 종료
     if (barrierX < 0.2 && barrierX > -0.2) {
       if (birdY < -0.3 || birdY > 0.3) return true;
     }
+     */
     return false; // 게임 계속 진행
   }
 
@@ -171,13 +175,12 @@ class GameProvider extends ChangeNotifier {
     gameStarted = false;
     score = 0;
     barrierX = 2;
-    bool isHolding = false;
-    double gameTime = 0;
+    isHolding = false;
+    gameTime = 0;
     hasPassedBarrier = false;
     wasColliding = false;
     notifyListeners();
   }
-
 
   // 꾹 누르기 시작
   void startHolding() {
